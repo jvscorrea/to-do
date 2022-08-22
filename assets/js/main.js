@@ -27,7 +27,7 @@ form.addEventListener("submit", (evento) =>{
 function criarElemento(item){
     console.log(nome)
 
-    const novoItem = document.createElement('p')
+    const novoItem = document.createElement('li')
     novoItem.classList.add('item', 'bg-white', 'p-2', 'w-100', 'rounded', 'mb-2', 'd-flex', 'justify-content-between')
     novoItem.innerHTML += item.nome
     novoItem.dataset.id = item.id
