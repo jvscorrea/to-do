@@ -43,7 +43,7 @@ function atualizaElemento(item) {
 
 function botaoElemento(id){
     const elementoBotao = document.createElement("a")
-    elementoBotao.classList.add('text-danger', 'btn-sm', 'text-end', 'text-decoration-none')
+    elementoBotao.classList.add('text-nowrap', 'ps-1','text-danger', 'btn-sm', 'text-end', 'text-decoration-none')
     elementoBotao.innerText = "Excluir"
 
     elementoBotao.addEventListener("click", function(){
