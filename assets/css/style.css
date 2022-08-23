@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;600&display=swap');
 
-*{font-family: 'Exo', sans-serif; font-weight: 400; word-wrap: break-word;}
+*{font-family: 'Exo', sans-serif; font-weight: 400;}
 h1, h2, h3, h4, h5, h6{font-family: 'Exo', sans-serif; font-weight: 600;}
 ul {padding-left: 0rem;}
 li{list-style: none;}
+a{width: 8rem}
 a:hover{cursor: pointer;}
 
-.content{background: rgb(118,255,221); background: linear-gradient(180deg, rgba(118,255,221,1) 0%, rgba(101,18,174,1) 100%); height: 100vh; word-wrap: break-word;}
+.content{background: rgb(118,255,221); background: linear-gradient(180deg, rgba(118,255,221,1) 0%, rgba(101,18,174,1) 100%); height: 100vh;}
 .btn-add-task{background-color: #666ddc; color: #FFFFFF; border: none; border-radius: 0.2rem; font-size: 0.9rem;}
 .btn-add-task:hover{background-color: #4b52b1; color: #FFFFFF; border: none;}
 
