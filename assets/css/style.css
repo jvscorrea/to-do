@@ -6,7 +6,7 @@ ul {padding-left: 0rem;}
 li{list-style: none;}
 a:hover{cursor: pointer;}
 
-.content{background: rgb(118,255,221); background: linear-gradient(180deg, rgba(118,255,221,1) 0%, rgba(101,18,174,1) 100%); height: 100vh;}
+.content{background: rgb(118,255,221); background: linear-gradient(180deg, rgba(118,255,221,1) 0%, rgba(101,18,174,1) 100%); height: 100vh; word-wrap: break-word;}
 .btn-add-task{background-color: #666ddc; color: #FFFFFF; border: none; border-radius: 0.2rem; font-size: 0.9rem;}
 .btn-add-task:hover{background-color: #4b52b1; color: #FFFFFF; border: none;}
 
