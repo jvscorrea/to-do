@@ -1,6 +1,7 @@
 const form = document.getElementById("novoItem")
 const lista = document.getElementById("lista")
 const itens = JSON.parse(localStorage.getItem("item")) || []
+const tarefaVazia = document.getElementById("nome")
 
 itens.forEach( (elemento) => {
     criarElemento(elemento)
@@ -11,22 +12,27 @@ form.addEventListener("submit", (evento) =>{
 
     const nome = evento.target.elements['nome']
     
-    const itemAtual = {
+    let itemAtual = {
         "nome": nome.value
     }
 
-    criarElemento(itemAtual)
+    if(itemAtual.nome.trim() == ""){
+        tarefaVazia.parentElement.classList.add('input--invalido')
+        tarefaVazia.parentElement.querySelector('.msg-erro').innerHTML = 'Por favor, digite uma Tarefa!'
+    }else{
+        criarElemento(itemAtual)
 
-    itens.push(itemAtual)
+        itens.push(itemAtual)
+    
+        localStorage.setItem("item", JSON.stringify(itens))
+    
+        nome.value = ""
+    }
 
-    localStorage.setItem("item", JSON.stringify(itens))
-
-    nome.value = ""
 })
 
 function criarElemento(item){
-    console.log(nome)
-
+    
     const novoItem = document.createElement('li')
     novoItem.classList.add('item', 'text-break', 'bg-white', 'p-2', 'w-100', 'rounded', 'mb-2', 'd-flex', 'justify-content-between')
     novoItem.innerHTML += item.nome
